@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Yo, yo, yo!</title>
+    <script type="text/javascript" src='lib/d3.js'></script>
+    <script type="text/javascript" src='lib/tabletop.js'></script>
+    <script type="text/javascript" src='lib/sheetsee.js'></script>
+    <script type="text/javascript" src='index.js'></script>
+    <link rel="shortcut icon" href="https://raw.github.com/jllord/sheetsee-cache/master/favico.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+<body>
+<div id="stuff"></div>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var URL = "0AvFUWxii39gXdFhqZzdTeU5DTWtOdENkQ1Y5bHdqT0E"
+    Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } ) 
+  })
+
+  function showInfo(data) {
+    Sheetsee.d3BubbleChart(data, { name: 'name', size: 'cuddlability', group: 'kind', div: '#stuff'})
+  }
+    
+</script>
+
+</body>
+</html>
