@@ -1,4 +1,4 @@
-Sheetsee.d3BubbleChart = function(data, options) {
+BySheetsee.d3BubbleChart = function(data, options) {
 	var tree = {name: "data", children: []}
 	var groups = {}
 
